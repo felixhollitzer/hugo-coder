@@ -90,6 +90,8 @@
     
     <meta name="msapplication-TileColor" content="{{ .Site.Params.icon_title_color | default "#ffffff" | relURL }}">
     <meta name="msapplication-TileImage" content="{{ .Site.Params.icon_tile_image | default "/images/mstile-310x310.png" | relURL }}">
+    
+    <link rel="fluid-icon" href="{{ .Site.Params.fluid_icon | default "/images/fluid_icon.png" | relURL }}" title="Felix Hollitzer">
 
     {{ range .AlternativeOutputFormats -}}
       {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
